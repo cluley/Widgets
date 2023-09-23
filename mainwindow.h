@@ -18,6 +18,7 @@ public:
 
 private slots:
     void on_pB_button_toggled(bool checked);
+    void pBar_worker();
 
 private:
     Ui::MainWindow *ui;

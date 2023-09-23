@@ -28,12 +28,21 @@ void MainWindow::on_pB_button_toggled(bool checked)
 {
     if(checked)
     {
-        if(ui->pBar_progression->value() == 10){
-            ui->pBar_progression->setValue(0);
-        }
-        else{
-            ui->pBar_progression->setValue(ui->pBar_progression->value() + 1);
-        }
+        pBar_worker();
+    }
+    else
+    {
+        pBar_worker();
+    }
+}
+
+void MainWindow::pBar_worker()
+{
+    if(ui->pBar_progression->value() == 10){
+        ui->pBar_progression->setValue(0);
+    }
+    else{
+        ui->pBar_progression->setValue(ui->pBar_progression->value() + 1);
     }
 }
 
